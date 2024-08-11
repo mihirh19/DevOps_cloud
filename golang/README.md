@@ -113,3 +113,79 @@ func add(a int, b int) (result int) {
 	return
 }
 ```
+
+## 🌀 Arrays in GoLang
+ - Arrays in Go provide a simple and efficient way to work with a fixed collection of elements. Unlike slices, arrays have a fixed size and cannot be resized.
+ 
+	```go
+	package main
+
+	import "fmt"
+
+	func main() {
+		fmt.Println("🌟 Arrays in Golang")
+
+		// Define an array of strings with a fixed size of 5
+		var name [5]string
+
+		// Assign values to the array
+		name[0] = "John"
+		name[1] = "Doe"
+
+		// Print the array
+		fmt.Println(name)
+
+		// Define and initialize an array of integers
+		var numbers = [5]int{1, 2, 3, 4, 5}
+
+		// Print the array of numbers
+		fmt.Println(numbers)
+	}
+
+	```
+	
+## 🚀 Slices in GoLang
+ - In Go, a slice is a flexible and dynamic data structure that provides a more powerful alternative to arrays. Slices can grow and shrink in size, making them more versatile for handling collections of data.
+ 
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // Define and initialize a slice of integers
+    numbers := []int{1, 2, 3, 4, 5}
+    fmt.Println("🔢 Numbers:", numbers)
+
+    // Print the length and capacity of the slice
+    fmt.Printf("📏 Length: %d, 🚀 Capacity: %d\n", len(numbers), cap(numbers))
+
+    // Append a new element to the slice
+    numbers = append(numbers, 6)
+    fmt.Println("➕ After Append:", numbers)
+
+    // Create a new slice with make
+    numbers = make([]int, 3, 5)
+    fmt.Println("🛠️ New Slice:", numbers)
+
+    fmt.Printf("📏 Length: %d, 🚀 Capacity: %d\n", len(numbers), cap(numbers))
+
+    // Append more elements to the slice
+    numbers = append(numbers, 4)
+    numbers = append(numbers, 5)
+    numbers = append(numbers, 6)
+
+    // Print the updated length and capacity
+    fmt.Printf("📏 Length: %d, 🚀 Capacity: %d\n", len(numbers), cap(numbers))
+}
+
+```
+#### 🔍 Output:
+```sh
+	🔢 Numbers: [1 2 3 4 5]
+	📏 Length: 5, 🚀 Capacity: 5
+	➕ After Append: [1 2 3 4 5 6]	
+	🛠️ New Slice: [0 0 0]
+	📏 Length: 3, 🚀 Capacity: 5
+	📏 Length: 6, 🚀 Capacity: 6
+```
