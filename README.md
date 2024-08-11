@@ -1,4 +1,4 @@
-# Welcome to the DevOps and Cloud Repository 🌐
+# DevOps and Cloud🌐
 
 This repository is a comprehensive resource for learning and practicing various DevOps tools and cloud computing concepts. It includes theory and practical files for popular DevOps tools such as Docker, Kubernetes, Jenkins, Ansible, Grafana, and Terraform.
 
