@@ -219,3 +219,112 @@ this is mihir
  test name
 
 ```
+# 🧠 User-Defined Variables
+
+## 📌 What is a Variable?
+A variable is a character string to which you can assign a value. In shell scripting, variables act as pointers to actual data. The shell allows you to create, assign, and delete variables.
+
+## 📋 Rules for Naming Variables:
+- Variable names can contain letters (a-z, A-Z), numbers (0-9), or underscores (`_`).
+- Reserved words cannot be used as variable names.
+- No whitespace is allowed within variable names.
+- Special characters like `!`, `*`,`-`, etc., cannot be used.
+- The first character of the variable name cannot be a number.
+- By convention, shell variable names are often in UPPERCASE.
+
+## 🛠️ Defining Variables:
+
+```bash
+MY_MESSAGE="Hello World"
+```
+
+🚨 Note: There must be no spaces around the = sign. VAR=value works, but VAR = value does not.
+
+## 📝 Example [variable.sh](./variable.sh)
+
+```bash
+#!/bin/bash
+# variable.sh
+# User-defined variables.
+
+name="Mihir"
+age="20"
+
+echo ${name}
+echo "My name is ${name} and my age is ${age}"
+# echo 'My name is ${name} and my age is ${age}'
+
+work="programm"
+var="ing"
+
+# Concatenating variables
+echo "I am $working"           # Undefined variable, will result in an empty output
+echo "I am ${work}ing"         # Correct usage, will print "programming"
+echo "I am ${work}${var}"      # Correct usage, will also print "programming"
+
+```
+
+# 🖥️ System Variables
+
+## 🌐 What are System Variables?
+   System variables are created and maintained by the Linux bash shell itself. They are usually defined in CAPITAL LETTERS and are used to configure various aspects of the shell environment, such as`PS1`, `PATH`, `LANG`, `HISTSIZE`, and `DISPLAY`.
+   
+   ### 🛠️ Commands to Manage Environment Variables:
+- `env` : Run a program in a custom environment or print the current environment variables when used without arguments.
+
+- `printenv` :  Print all or the specified environment variables.
+
+- `set` : Set or unset shell variables. It lists all variables, including environment, shell variables, and shell functions.
+
+- `unset` : Delete shell and environment variables.
+
+- `export` : Set environment variables.
+
+### 🌟 Common System Variables:
+- `USER`: The current logged-in user.
+
+- `HOME`: The home directory of the current user.
+- `EDITOR`: The default file editor used when you type edit in the terminal.
+- `SHELL`: The path to the current user's shell, like bash or zsh.
+- `LOGNAME`: The name of the current user.
+- `PATH`: A list of directories to be searched when executing commands.
+- `LANG`: The current locale settings.
+- `TERM`: The current terminal emulation.
+
+## 📝 Example [systemvariables.sh](./systemvariables.sh) :
+```bash
+
+#!/bin/bash
+# 🖥️ System-defined variables.
+
+# Print the home directory of the current user
+echo "🏠 Home Directory: ${HOME}"
+
+# Print the type of operating system
+echo "🖥️ OS Type: ${OSTYPE}"
+
+# Print the PATH variable
+echo "📂 Path: $PATH"
+
+# Print the process ID of the current shell
+echo "🔢 Process ID: $$"
+
+# Print the parent process ID
+echo "🔙 Parent Process ID: ${PPID}"
+
+# Print the present working directory
+echo "📁 Current Directory: $PWD"
+
+# Print the hostname of the machine
+echo "💻 Hostname: $HOSTNAME"
+
+# Print the user ID
+echo "🆔 User ID: $UID"
+
+# Sleep for 5 seconds
+sleep 5
+
+# Print the number of seconds since the script started
+echo "⏱️ Seconds Since Start: ${SECONDS}"
+
+```
