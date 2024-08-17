@@ -4,6 +4,7 @@ In AWS (Amazon Web Services), a **region** is a specific geographic area where A
 
 ### 🌎 Why Are Regions Important?
 - **🏢 Data Residency & Compliance:** Choose regions that comply with local regulations for data storage and processing.
+
 - **⚙️ High Availability:** Regions contain multiple AZs, ensuring that services remain available even if one AZ experiences issues.
 - **🔄 Fault Tolerance & Disaster Recovery:** Regions allow for redundancy, enabling you to replicate data and applications across multiple AZs or regions.
 - **⚡ Reduced Latency:** Deploy your applications closer to end-users to improve performance and responsiveness.

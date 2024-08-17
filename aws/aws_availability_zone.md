@@ -5,6 +5,7 @@ An **AWS Availability Zone (AZ)** is an isolated data center within an AWS regio
 ### 🔑 Key Points:
 
 - **🔄 Redundancy:** AZs offer redundant infrastructure, allowing resources to be distributed across multiple AZs to minimize service disruptions.
+
 - **🛡️ Fault Isolation:** Each AZ operates independently, so issues in one AZ won't affect others, protecting your apps and data.
 - **⚡ Low Latency:** AZs within a region are close to each other, ensuring fast communication between resources.
 - **📈 Scalability:** AZs support high scalability, enabling workload distribution across multiple AZs.
