@@ -46,3 +46,10 @@ Consider the following factors when deciding between traditional computing and c
 - 📈 `Scalability Needs` : Think about your future growth. If you expect changes in demand, cloud computing's scalability might be advantageous.
 - 🧑‍💻 `Expertise` : Assess your IT knowledge. Traditional computing may require an in-house IT team, while cloud computing lets you rely on the expertise of CSPs.
 - 🔐 `Security Requirements` : Consider the sensitivity of your data and any compliance regulations. Cloud computing providers often offer advanced security measures and expertise.
+
+# Table of content : 
+   
+   - [`1. Cloud Services 🌩️`](./cloud_services.md) 
+   
+   - [`2. Deployment models ☁️`](./deployment_model.md)  
+   - 
